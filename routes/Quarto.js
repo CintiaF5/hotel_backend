@@ -132,7 +132,7 @@ router.put("/", validaQuarto, async (req, res) => {
   const dados = req.body;
 
   await Quarto.findByIdAndUpdate(
-    req.params.id,
+    req.body._id,
     {
       $set: dados,
     },
