@@ -149,7 +149,7 @@ router.put("/", validaQuarto, async (req, res) => {
         sucesso: false,
         errors: [
           {
-            message: `Não foi possível alterar o quarto com o id ${req.params.id}`,
+            message: `Não foi possível alterar o quarto com o id ${req.body._id}`,
           },
         ],
       });
