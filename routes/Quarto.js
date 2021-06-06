@@ -120,10 +120,10 @@ router.delete("/:id", async (req, res) => {
 });
 
 /*******************************************
- * PUT /quartos/:id
+ * PUT /quartos/
  * Altera os dados do quarto informado
  *******************************************/
-router.put("/:id", validaQuarto, async (req, res) => {
+router.put("/", validaQuarto, async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ sucesso: false, errors: errors.array() });
