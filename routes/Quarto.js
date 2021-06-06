@@ -140,7 +140,7 @@ router.put("/", validaQuarto, async (req, res) => {
   )
     .then((quarto) => {
       res.send({
-        sucesso: false,
+        sucesso: true,
         message: `Quarto ${quarto.numero} alterado com sucesso!`,
       });
     })
